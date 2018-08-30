@@ -23,10 +23,6 @@
   }
 
   &.expanded {
-    .commit-summary-description-container {
-      border-bottom: none;
-    }
-
     .commit-summary-description-scroll-view {
       max-height: none;
       overflow: auto;
@@ -65,6 +61,7 @@
 // for a class name one finds in tsx. We might want to consider not allowing
 // this in the future but that's for... the future.
 .commit-summary {
+
   &-title,
   &-meta {
     padding: var(--spacing);
@@ -80,7 +77,6 @@
 
   &-description-container {
     display: flex;
-
     // So that we have something to position the expander against
     position: relative;
     border-bottom: var(--base-border);
@@ -96,11 +92,13 @@
   // Enable text selection inside the title and description elements.
   &-title,
   &-description {
+
     span,
     a {
       -webkit-user-select: text;
       user-select: text;
     }
+
     span {
       cursor: text;
     }
@@ -129,7 +127,6 @@
     display: flex;
     flex-direction: row;
     min-width: 0;
-
     margin-right: var(--spacing);
     font-size: var(--font-size-sm);
 
